@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server -p 3001",
-    "format": "prettier —write ."
+    "format": "prettier —write .",
+    "lint:js": "eslint ./**/*.js",
+    "lint:css": "stylelint ./**/*.scss",
+    "lint": "npm run lint:js && npm run lint:css"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +17,11 @@
     "http-server": "^14.1.1"
   },
   "devDependencies": {
-    "prettier": "^3.0.2"
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.2",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-prettier": "^4.0.2"
   }
 }
