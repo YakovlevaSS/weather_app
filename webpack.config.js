@@ -1,18 +1,12 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-// const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
 module.exports = {
     entry: './main.js',
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     module: {
         rules: [
-        //     {
-        //     test: /\.css$/,
-        //     use: [MiniCssExtractPlugin.loader, 'css-loader'],
-        // },
             { test: /\.css$/, use: ['style-loader', 'css-loader'] },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -35,7 +29,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: './index.html',
-        })
-        // new MiniCssExtractPlugin(),
+        }),
     ],
+    devtool: 'source-map',
 }
