@@ -1,20 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather app</title>
-    <!-- <link rel="stylesheet" href="./style/style.css"> -->
-</head>
-<body>
-<header class="header">
-    <h1 class="title">Прогноз погоды</h1>
-    <form action="" class="search">
-        <input type="text" class="search__input" placeholder="Введите название города">
-        <button class="search__button">Показать</button>
-    </form>
-</header>
-
-    <!-- <script src="main.js"></script> -->
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather app</title>
+        <!-- <link rel="stylesheet" href="./style/style.css"> -->
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="title">Прогноз погоды</h1>
+            <form action="" class="search">
+                <input
+                    type="text"
+                    class="search__input"
+                    placeholder="Введите название города"
+                />
+                <button class="search__button">Показать</button>
+            </form>
+        </header>
+        <div class="weather-content">
+        <div class="weather-card">
+                <h2 class="weather-card__title">London<span>GB</span></h2>
+            <div class="weather-card__content">
+                <div class="weather-card__value">11<sup>°c</sup></div>
+                <img class="weather-card__img" src="./static/8 1.svg" alt="Weather">
+            </div>
+            <div class="weather-card-description">Облачно</div>
+        </div>            
+        </div>
+        <!-- <script src="main.js"></script> -->
+    </body>
 </html>
