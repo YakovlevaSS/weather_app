@@ -1,17 +1,21 @@
 import './style/style.css'
-import { getFetch } from './component/fetch.js'
+//import { getWeather } from './component/getArr.js'
 import { renderWeatherCard } from './component/renderWeatherCard'
+import { getFetch } from './component/fetch.js'
 
 const formSearch = document.querySelector('.search')
 const inputSearch = document.querySelector('.search__input')
 const appEl = document.querySelector('.appEl')
-let city = ''
+export let city = ''
 
 formSearch.onsubmit = function (e) {
     e.preventDefault()
     city = inputSearch.value.trim()
-    console.log(city)
 
-    getFetch(city)
-    renderWeatherCard(appEl)
+    function getWeather() {
+        return getFetch().then((data) => {
+            return renderWeatherCard(appEl, data)
+        })
+    }
+    getWeather()
 }
