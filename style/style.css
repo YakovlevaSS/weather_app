@@ -67,24 +67,24 @@
     display: flex;
     flex-direction: column;
     box-shadow: 0px 5px 20px 0px #1b6c7240;
-background-color: #fff;
+    background-color: #fff;
     border-radius: 6px;
 }
 
 .weather-card::before {
-	content: '';
+    content: '';
 
-	position: absolute;
-	left: 10px;
-	bottom: -10px;
-	z-index: -1;
+    position: absolute;
+    left: 10px;
+    bottom: -10px;
+    z-index: -1;
 
-	width: calc(100% - 20px);
-	height: 100%;
+    width: calc(100% - 20px);
+    height: 100%;
 
-	background: #fff;
-	box-shadow: 0px 5px 20px rgba(27, 108, 114, 0.25);
-	border-radius: 6px;
+    background: #fff;
+    box-shadow: 0px 5px 20px rgba(27, 108, 114, 0.25);
+    border-radius: 6px;
 
 }
 
@@ -120,7 +120,7 @@ background-color: #fff;
 .weather-card__value {
     font-size: 92px;
     line-height: 1;
-    color: #000000;
+    color: #000;
 }
 
 .weather-card__value sup {
@@ -131,5 +131,12 @@ background-color: #fff;
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
-    color: #000000;
+    color: #000;
+}
+
+.error {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    color: #000; 
 }

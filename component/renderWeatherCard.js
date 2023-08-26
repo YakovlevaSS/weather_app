@@ -1,5 +1,6 @@
 export function renderWeatherCard(appEl, data) {
-    const htmlEl = `        <div class="weather-content">
+    const htmlEl = `
+    <div class="weather-content">
     <div class="weather-card">
             <h2 class="weather-card__title">${data.location.name}<span>${data.location.country}</span></h2>
         <div class="weather-card__content">
@@ -7,5 +8,15 @@ export function renderWeatherCard(appEl, data) {
             <img class="weather-card__img" src="./static/8 1.svg" alt="Weather">
         </div>
         <div class="weather-card-description">${data.current.condition.text}</div>`
+    appEl.innerHTML = htmlEl
+}
+export function renderError(appEl, data) {
+    console.log(data.error.message)
+    const htmlEl = `
+    <div class="weather-content">
+    <div class="weather-card">
+    <p class="error">Данный город не найден</p>
+    </div>
+    </div>`
     appEl.innerHTML = htmlEl
 }

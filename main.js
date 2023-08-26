@@ -1,6 +1,5 @@
 import './style/style.css'
-//import { getWeather } from './component/getArr.js'
-import { renderWeatherCard } from './component/renderWeatherCard'
+import { renderError, renderWeatherCard } from './component/renderWeatherCard'
 import { getFetch } from './component/fetch.js'
 
 const formSearch = document.querySelector('.search')
@@ -14,7 +13,11 @@ formSearch.onsubmit = function (e) {
 
     function getWeather() {
         return getFetch().then((data) => {
-            return renderWeatherCard(appEl, data)
+            if (data.error) {
+                return renderError(appEl, data)
+            } else {
+                return renderWeatherCard(appEl, data)
+            }
         })
     }
     getWeather()
